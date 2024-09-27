@@ -43,13 +43,24 @@ const userObject = [
 // console.log(userObject[0].name)
 
 
-console.log(users)
-console.log(Object.keys(users))
-console.log(Object.values(users))
-console.log(Object.entries(users)) //returns array of key value pairs
-console.log(users.hasOwnProperty("email"))
+// console.log(users)
+// console.log(Object.keys(users))
+// console.log(Object.values(users))
+// console.log(Object.entries(users)) //returns array of key value pairs
+// console.log(users.hasOwnProperty("email"))
 
-console.log(users.valueOf())
-console.log(users.toString())
+// console.log(users.valueOf())
+// console.log(users.toString())
 
 //more exploration of Object in javascript 
+
+//object destructuring in js 
+const course = {
+    coursename: "Javascript",
+    price: 9999,
+    courseInstructor:"hitesh"
+}
+
+//now object is destructured
+const {coursename: coursen, price}= course;
+console.log(coursen)
