@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body style="background-color: black; color: azure;">
+
+</body>
+<script>
+    //creating and uploading the new element with attribute using dom manipulation 
+    const div = document.createElement("div")
+    div.className = "Main"
+    div.id = Math.floor(Math.random()*10 +1)
+    div.setAttribute("title","learning DOM ")
+    // div.innerHTML = "This is new div" 
+    // div.textContent = "This is div with main as class "
+    div.style.backgroundColor = "green"
+    div.style.color = "black"
+   const addText = document.createTextNode("Hey DOM manipulator")
+   div.appendChild(addText)
+
+    document.body.appendChild(div)
+
+    console.log(div)
+
+   const Creator = function(cName,id,title,content,color){
+        const div = document.createElement("div")
+        div.className = cName
+        div.id = id
+        div.setAttribute("title",`${title}`)
+        div.textContent = `${content}`
+        div.style.color = `${color}`
+        document.body.appendChild(div)
+        console.log(div)
+
+    }
+    Creator("hello",45,"Bishow","This is another div","red")
+    Creator("helloOne",45,"Bishow","This is another div","aqua")
+</script>
+
+</html>
